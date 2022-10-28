@@ -1,0 +1,28 @@
+# created by virtualenv automatically
+
+# virtualenv lib
+/Lib
+## Python ##
+### Byte-compiled / optimized / DLL files
+/songcrud/__pycache__
+*.py[cod]
+*$py.class
+
+### Django stuff:
+*.log
+local_settings.py
+/songcrud/db.sqlite3
+db.sqlite3-journal
+
+### Scrapy stuff:
+.scrapy
+
+### Environments
+/songcrud/songcrud/.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+

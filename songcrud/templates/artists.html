@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+    <!--tells django that main.html template that they it extends from should sit here-->
+{% load static %}  <!--lets django know that we are going to work with static file in this template-->
+
+{% block content %}
+    <h3> Artists </h3>
+
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'image/burna.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Burna Boy</h5>
+          <p class="card-text">No1. Afrobeat Musician</p>
+          <a href="#" class="btn btn-primary">Songs by Burna</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'image/jcole.jpg' %}" class="card-img-top" class="jcole" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">J. Cole</h5>
+          <p class="card-text">No1. Hip-Hop Rapper</p>
+          <a href="#" class="btn btn-primary">Songs by J. Cole</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'image/zoro.jpg' %}" class="card-img-top" class="zoro" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Zoro</h5>
+          <p class="card-text">No1. Indigenous Igbo Rapper</p>
+          <a href="#" class="btn btn-primary">Songs by Zoro</a>
+        </div>
+      </div>
+
+{% endblock content %}

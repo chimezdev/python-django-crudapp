@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+    <!--tells django that main.html template that they it extends from should sit here-->
+{% load static %}  <!--lets django know that we are going to work with static file in this template-->
+
+
+
+{% block content %}
+    
+<h1> YOOO! WELCOME TO MY MUSICAPP </h1>
+<img src="{% static 'image/burna-stage.jpg' %}" class="stage" alt="Burna Boy stage performance">
+       
+{% endblock  %}
