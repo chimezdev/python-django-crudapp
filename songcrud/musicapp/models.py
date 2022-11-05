@@ -29,7 +29,7 @@ class Song(models.Model):
         return self.title
     
 class Lyric(models.Model):
-    song_id = models.ForeignKey(Song, null=True, on_delete=models.SET_NULL)
+    song_id = models.ForeignKey(Song, null=True, on_delete=models.CASCADE)
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
     content = models.TextField(max_length=2000, null=True)
     

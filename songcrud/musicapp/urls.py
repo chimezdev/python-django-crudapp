@@ -18,10 +18,23 @@ from .import views
 from django.contrib import admin
 from django.urls import path
 
+#for drf
+from .views import *
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name="index"),
-    path('artists', views.artists, name="artists"),
-    path('songs', views.songs, name="songs"),
+    # path('songsAPI/', SongView),
+    # path('lyricsAPI/', LyricView),
+    path('artistesAPI/', artisteView.as_view()),
+    path('artiste-detailAPI/<str:pk>', Artiste_detail.as_view()),
+    path('songsAPI/', SongAPI.as_view()),
+    path('song-detailAPI/<str:pk>', Song_detail.as_view()),
+    path('lyricsAPI/', LyricAPI.as_view()),
+    path('lyrics-detailAPI/<str:pk>', Lyric_detail.as_view()),
+    
+    # path('', views.index, name="index"),
+    # path('artists', views.artists, name="artists"),
+    # path('songs', views.songs, name="songs"),
     
 ]
